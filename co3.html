@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+	<meta charset="utf-8" />
+	<script src="js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		div{
+			width: 160px;
+			background: rgb(17, 129, 178);
+		}
+		.s1{
+			color: red;
+			font-size: 36px;
+			background: #005a81;
+		}
+		.slide{
+			width: 90%;
+			height: 800px;
+			box-shadow: 1px 3px 5px 3px rgba(0,0,0,0.4);
+			margin: 50px auto;
+		}
+	</style>
+	<script>
+		// 加载的方法
+		// $(document).ready(f);
+		// function f () {
+		// 	$("div~div").click(
+		// 		function (e) {
+		// 			$(this).addClass("s1");
+		// 			$(this).siblings().removeClass("s1");
+		// 		});
+		// }
+
+
+
+		// $(document).ready(
+		// 	function () {
+		// 	$("div").click(
+		// 		function (e) {
+		// 			$(this).addClass("s1");
+		// 			$(this).siblings().removeClass("s1");
+		// 		});
+
+		// 	});
+		
+
+		// $(function () {
+		// 	$("div").click(
+		// 		function (e) {
+		// 			$(this).addClass("s1");
+		// 			$(this).siblings().removeClass("s1");
+		// 		});
+		// });
+	</script>
+</head>
+<body>
+	
+		<div class="slide"></div>
+		<div class="slide1"></div>
+
+	
+		<script>
+		var xxx = window.screenX;
+		document.write(xxx);
+
+		$(function(){
+			$("div").click(function(e){
+				$(".slide").slideUp(3000,function () {
+					$(".slide").hide();
+					$(".slide").show();
+					$(".slide1").css("background","red").css({"width":"200px","height":"200px"});
+
+				});
+			});
+		});
+
+		
+
+		</script>
+</body>
+</html>
